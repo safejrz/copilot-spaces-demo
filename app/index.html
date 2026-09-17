@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Copilot Spaces Demo</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">GitHub Copilot Spaces</p>
+          <h1>Project-aware AI for real work</h1>
+          <p class="subtitle">
+            A simple demo showing how a Copilot Space keeps the repository, docs,
+            instructions, and task goals in sync.
+          </p>
+          <div class="cta-row">
+            <button class="primary" data-action="show-context">Show grounded context</button>
+            <button class="secondary" data-action="show-architecture">Show architecture view</button>
+          </div>
+        </div>
+        <div class="hero-panel">
+          <div class="signal signal-green">
+            <span class="label">Repository context</span>
+            <strong>Live</strong>
+          </div>
+          <div class="signal signal-blue">
+            <span class="label">Task guidance</span>
+            <strong>Focused</strong>
+          </div>
+          <div class="signal signal-purple">
+            <span class="label">Documentation</span>
+            <strong>Attached</strong>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <section class="feature-grid">
+          <article class="card accent-blue">
+            <h2>Repository grounding</h2>
+            <p>
+              The assistant can reason from real files instead of guessing from a
+              generic prompt.
+            </p>
+          </article>
+
+          <article class="card accent-purple">
+            <h2>Attached docs</h2>
+            <p>
+              Design notes, READMEs, and instructions remain available as the task
+              evolves.
+            </p>
+          </article>
+
+          <article class="card accent-green">
+            <h2>Multi-file awareness</h2>
+            <p>
+              A change can be understood in the broader context of the app, docs,
+              and project conventions.
+            </p>
+          </article>
+
+          <article class="card accent-gold">
+            <h2>Task-specific intent</h2>
+            <p>
+              The problem statement and goals can stay visible while the agent works.
+            </p>
+          </article>
+        </section>
+
+        <section class="panel" id="context-panel">
+          <div class="panel-header">
+            <h3>Grounded context stack</h3>
+          </div>
+          <ul class="stack-list">
+            <li>README: project purpose and user experience</li>
+            <li>Docs: conceptual explanation of Copilot Spaces</li>
+            <li>Copilot instructions: repo-specific working rules</li>
+            <li>Source files: implementation details and real structure</li>
+          </ul>
+        </section>
+
+        <section class="panel hidden" id="architecture-panel">
+          <div class="panel-header">
+            <h3>Architecture view</h3>
+          </div>
+          <div class="architecture-flow">
+            <div class="node">User goal</div>
+            <div class="arrow">→</div>
+            <div class="node">Space context</div>
+            <div class="arrow">→</div>
+            <div class="node">Repo + docs</div>
+            <div class="arrow">→</div>
+            <div class="node">Implementation</div>
+          </div>
+        </section>
+
+        <section class="scenario">
+          <h3>Example use case</h3>
+          <blockquote>
+            “Help me add a feature for project health tracking using the project’s rest
+            of the repo and documentation as the source of truth.”
+          </blockquote>
+          <p>
+            In a Copilot Space, the code agent can use this repository’s docs,
+            instructions, and structure instead of working from a vague idea alone.
+          </p>
+        </section>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
